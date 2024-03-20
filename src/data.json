@@ -1,0 +1,72 @@
+[
+	{
+		"id": 1,
+		"question": "What is the capital of Canada?",
+		"answerChoices": ["Toronto", "Ottawa", "Montreal", "Vancouver"],
+		"correctAnswer": "Ottawa"
+	},
+	{
+		"id": 2,
+		"question": "Which planet is known as the \"Morning Star\"?",
+		"answerChoices": ["Mars", "Venus", "Jupiter", "Mercury"],
+		"correctAnswer": "Venus"
+	},
+	{
+		"id": 3,
+		"question": "What is the chemical symbol for water?",
+		"answerChoices": ["H2O", "CO2", "O2", "H2SO4"],
+		"correctAnswer": "H2O"
+	},
+	{
+		"id": 4,
+		"question": "Who developed the theory of relativity?",
+		"answerChoices": [
+			"Isaac Newton",
+			"Albert Einstein",
+			"Stephen Hawking",
+			"Nikola Tesla"
+		],
+		"correctAnswer": "Albert Einstein"
+	},
+	{
+		"id": 5,
+		"question": "Which of the following is not a programming language?",
+		"answerChoices": ["Python", "JavaScript", "HTML", "SQL"],
+		"correctAnswer": "HTML"
+	},
+	{
+		"id": 6,
+		"question": "What is the tallest mammal in the world?",
+		"answerChoices": ["Elephant", "Giraffe", "Hippopotamus", "Whale"],
+		"correctAnswer": "Giraffe"
+	},
+	{
+		"id": 7,
+		"question": "Which country is the largest by land area?",
+		"answerChoices": ["Russia", "Canada", "China", "United States"],
+		"correctAnswer": "Russia"
+	},
+	{
+		"id": 8,
+		"question": "Who wrote \"Romeo and Juliet\"?",
+		"answerChoices": [
+			"William Shakespeare",
+			"Charles Dickens",
+			"Jane Austen",
+			"Mark Twain"
+		],
+		"correctAnswer": "William Shakespeare"
+	},
+	{
+		"id": 9,
+		"question": "What is the chemical symbol for gold?",
+		"answerChoices": ["Au", "Ag", "Fe", "Pb"],
+		"correctAnswer": "Au"
+	},
+	{
+		"id": 10,
+		"question": "What is the fastest land animal?",
+		"answerChoices": ["Cheetah", "Lion", "Leopard", "Gazelle"],
+		"correctAnswer": "Cheetah"
+	}
+]
