@@ -32,7 +32,7 @@ function AppLayout() {
 				</Main>
 			</StyledAppLayout>
 
-			<Uploader />
+			{/* <Uploader /> */}
 		</>
 	);
 }
