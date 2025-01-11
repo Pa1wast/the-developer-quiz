@@ -26,103 +26,103 @@ import { SettingsProvider } from './contexts/SettingsContext.jsx';
 import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
-	{
-		path: '/',
-		element: (
-			<ProtectedRoute>
-				<AppLayout />
-			</ProtectedRoute>
-		),
-		children: [
-			{ index: true, element: <Home /> },
+  {
+    path: '/',
+    element: (
+      <ProtectedRoute>
+        <AppLayout />
+      </ProtectedRoute>
+    ),
+    children: [
+      { index: true, element: <Home /> },
 
-			{
-				path: 'quizoptions',
-				element: <QuizOptions />,
-			},
-			{
-				path: 'quiz',
-				element: <Quiz />,
-			},
+      {
+        path: 'quizoptions',
+        element: <QuizOptions />,
+      },
+      {
+        path: 'quiz',
+        element: <Quiz />,
+      },
 
-			{
-				path: 'settings',
-				element: <Settings />,
-				children: [
-					{
-						path: 'display',
-						element: <DisplaySettings />,
-					},
-					{ path: 'account', element: <AccountSettings /> },
-					{ path: 'sound', element: <SoundSettings /> },
-				],
-			},
-			{
-				path: 'leaderboard',
-				element: <LeaderBoard />,
-			},
-			{
-				path: 'about',
-				element: <About />,
-			},
-			{
-				path: '*',
-				element: <p>no page found</p>,
-			},
-		],
-	},
-	{
-		path: 'results',
-		element: <Results />,
-	},
+      {
+        path: 'settings',
+        element: <Settings />,
+        children: [
+          {
+            path: 'display',
+            element: <DisplaySettings />,
+          },
+          { path: 'account', element: <AccountSettings /> },
+          { path: 'sound', element: <SoundSettings /> },
+        ],
+      },
+      {
+        path: 'leaderboard',
+        element: <LeaderBoard />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: '*',
+        element: <p>no page found</p>,
+      },
+    ],
+  },
+  {
+    path: 'results',
+    element: <Results />,
+  },
 
-	{
-		path: 'login',
-		element: <LogIn />,
-	},
-	{
-		path: 'signup',
-		element: <SignUp />,
-	},
+  {
+    path: 'login',
+    element: <LogIn />,
+  },
+  {
+    path: 'signup',
+    element: <SignUp />,
+  },
 
-	{
-		path: '*',
-		element: <p>error</p>,
-	},
+  {
+    path: '*',
+    element: <p>error</p>,
+  },
 ]);
 
 const queryClient = new QueryClient();
 
 function App() {
-	return (
-		<QueryClientProvider client={queryClient}>
-			<SettingsProvider>
-				<QuizProvider>
-					<DarkModeProvider>
-						<NavbarProvider>
-							<GlobalStyles />
-							<RouterProvider router={router} />
-						</NavbarProvider>
-					</DarkModeProvider>
-				</QuizProvider>
-			</SettingsProvider>
-			<ReactQueryDevtools initialIsOpen={false} />
-			<Toaster
-				position="top-center"
-				reverseOrder={false}
-				gutter={8}
-				toastOptions={{
-					// Define default options
-					duration: 5000,
-					style: {
-						background: 'var(--color-bg-sec)',
-						color: 'var(--color-text-btn)',
-						fontSize: '16px',
-					},
-				}}
-			/>
-		</QueryClientProvider>
-	);
+  return (
+    <QueryClientProvider client={queryClient}>
+      <SettingsProvider>
+        <QuizProvider>
+          <DarkModeProvider>
+            <NavbarProvider>
+              <GlobalStyles />
+              <RouterProvider router={router} />
+            </NavbarProvider>
+          </DarkModeProvider>
+        </QuizProvider>
+      </SettingsProvider>
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        toastOptions={{
+          // Define default options
+          duration: 5000,
+          style: {
+            background: 'var(--color-bg-sec)',
+            color: 'var(--color-text-btn)',
+            fontSize: '16px',
+          },
+        }}
+      />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
